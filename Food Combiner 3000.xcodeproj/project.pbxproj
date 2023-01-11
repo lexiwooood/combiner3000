@@ -13,7 +13,6 @@
 		35D100B1296F4FD3008EC2E7 /* Food_Combiner_3000Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D100B0296F4FD3008EC2E7 /* Food_Combiner_3000Tests.swift */; };
 		35D100BB296F4FD3008EC2E7 /* Food_Combiner_3000UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D100BA296F4FD3008EC2E7 /* Food_Combiner_3000UITests.swift */; };
 		35D100BD296F4FD3008EC2E7 /* Food_Combiner_3000UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D100BC296F4FD3008EC2E7 /* Food_Combiner_3000UITestsLaunchTests.swift */; };
-		35D100CC296F5C01008EC2E7 /* FoodApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D100CB296F5C01008EC2E7 /* FoodApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		35D100B6296F4FD3008EC2E7 /* Food Combiner 3000UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food Combiner 3000UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D100BA296F4FD3008EC2E7 /* Food_Combiner_3000UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_Combiner_3000UITests.swift; sourceTree = "<group>"; };
 		35D100BC296F4FD3008EC2E7 /* Food_Combiner_3000UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_Combiner_3000UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		35D100CB296F5C01008EC2E7 /* FoodApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApi.swift; sourceTree = "<group>"; };
 		35D100CD296F62C7008EC2E7 /* Food-Combiner-3000-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Food-Combiner-3000-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -99,10 +97,9 @@
 				35D1009F296F4FD0008EC2E7 /* Food_Combiner_3000App.swift */,
 				35D100A1296F4FD0008EC2E7 /* ContentView.swift */,
 				35D100A3296F4FD3008EC2E7 /* Assets.xcassets */,
-				35D100CB296F5C01008EC2E7 /* FoodApi.swift */,
 			);
 			path = "Food Combiner 3000";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		35D100AF296F4FD3008EC2E7 /* Food Combiner 3000Tests */ = {
 			isa = PBXGroup;
@@ -251,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D100A2296F4FD0008EC2E7 /* ContentView.swift in Sources */,
-				35D100CC296F5C01008EC2E7 /* FoodApi.swift in Sources */,
 				35D100A0296F4FD0008EC2E7 /* Food_Combiner_3000App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

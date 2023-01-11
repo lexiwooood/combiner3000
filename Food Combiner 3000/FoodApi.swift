@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FoodApi {
+public class FoodApi {
     struct FoodInfo: Codable {
         // properties of FoodInfo
     }

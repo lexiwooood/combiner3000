@@ -8,12 +8,14 @@
 import SwiftUI
 import Foundation
 
-import FoodApi
-
 struct ContentView: View {
+    struct FoodInfo: Decodable {
+        // properties of FoodInfo
+    }
 
     @State private var foodListText: String = ""
     @State private var orderedFoodList: [String] = []
+    @State private var foodInfoList: [FoodInfo?] = []
 
     var body: some View {
         VStack {
@@ -27,8 +29,7 @@ struct ContentView: View {
                 let group = DispatchGroup()
                 for food in foodList {
                     group.enter()
-                    let foodApi = FoodApi()
-                    foodApi.fetchFoodInfo(foodName: food) { foodInfo in
+                    fetchFoodInfo(foodName: food) { foodInfo in
                         if let foodInfo = foodInfo {
                             self.foodInfoList.append(foodInfo)
                         }
@@ -48,5 +49,31 @@ struct ContentView: View {
             }
         }
     }
+    //api call
+    func fetchFoodInfo(foodName: String, completion: @escaping (FoodInfo?) -> Void) {
+        let apiKey = "YOUR_API_KEY"
+        let url = URL(string: "https://api.nal.usda.gov/fdc/v1/food/\(foodName)?api_key=\(apiKey)")!
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error: \(error)")
+                completion(nil)
+                return
+            }
+            guard let data = data else {
+                print("No data received")
+                completion(nil)
+                return
+            }
+            do {
+                let foodInfo = try JSONDecoder().decode(FoodInfo.self, from: data)
+                completion(foodInfo)
+            } catch {
+                print("Error decoding JSON: \(error)")
+                completion(nil)
+            }
+        }.resume()
+    }
+    
 }
 
